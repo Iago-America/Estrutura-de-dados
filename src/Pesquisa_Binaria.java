@@ -6,16 +6,25 @@ public class Pesquisa_Binaria {
         List<Integer> minhaLista = new ArrayList<>();
         minhaLista.add(1);  //0
         minhaLista.add(3);  //1
-        minhaLista.add(5);  //2
-        minhaLista.add(7);  //3
-        minhaLista.add(9);  //4
+        minhaLista.add(17);  //2
+        minhaLista.add(29);  //3
+        minhaLista.add(55);  //4
+        minhaLista.add(71);  //5
+        minhaLista.add(72);  //6
+        minhaLista.add(74);  //7
+        minhaLista.add(789);  //8
 
-        
+        int item = 74;
+        Integer indice = adicionarItemALista(minhaLista, item);
 
-        System.out.println(adicionarItemALista(minhaLista, 1));
+        if (indice != null) {
+            System.out.println("Item " + item + " encontrado no índice " + indice);
+        } else {
+            System.out.println("Item " + item + " não encontrado na lista.");
+        }
     }
 
-    public static Object adicionarItemALista(List<Integer> lista, int item) {
+    public static Integer adicionarItemALista(List<Integer> lista, int item) {
         int baixo = 0;
         int alto = lista.size() - 1;
 
@@ -30,8 +39,8 @@ public class Pesquisa_Binaria {
             } else {
                 baixo = meio + 1;
             }
-
         }
+
         return null;
     }
 }
